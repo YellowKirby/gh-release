@@ -52,7 +52,14 @@
     "node": ">=8.9"
   },
   "dependencies": {
-    "sha.js": "^2.4.10"
+    "@types/graphql": "^0.13.0",
+    "@types/ramda": "^0.25.24",
+    "graphql": "^0.13.2",
+    "graphql-request": "^1.5.1",
+    "prelude.ts": "^0.7.3",
+    "ramda": "^0.25.0",
+    "ramda-fantasy": "^0.8.0",
+    "tsmonad": "^0.8.0"
   },
   "devDependencies": {
     "ava": "^1.0.0-beta.3",
