@@ -1,4 +1,25 @@
-{
+{query {
+  repository(owner: "dev", name: "sn-component-form-controls") {
+    pullRequests(last: 5, states:MERGED, baseRefName:"london") {
+      edges {
+        node {
+          title,
+          mergedAt
+        }
+      }
+    },
+    releases(first:5, orderBy:{field:CREATED_AT, direction:DESC} ) {
+      edges {
+        node {
+          tag {
+            name
+          },
+          createdAt
+        }
+      }
+    }
+  }
+}
   "compilerOptions": {
     "target": "es2017",
     "outDir": "build/main",
@@ -20,7 +41,7 @@
     // "alwaysStrict": true /* Parse in strict mode and emit "use strict" for each source file. */,
 
     /* Additional Checks */
-    "noUnusedLocals": true /* Report errors on unused locals. */,
+    "noUnusedLocals": false /* Report errors on unused locals. */,
     "noUnusedParameters": true /* Report errors on unused parameters. */,
     "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
     "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */,
@@ -35,7 +56,7 @@
     // "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
     // "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
 
-    "lib": ["es2017"],
+    "lib": ["es2017", "dom", "esnext"],
     "types": ["node"],
     "typeRoots": ["node_modules/@types", "src/types"]
   },
