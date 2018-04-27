@@ -439,7 +439,7 @@ export interface GQLClosableNameMap {
   Milestone: GQLMilestone;
 }
 
-export type GQLDateTime = any;
+export type GQLDateTime = String;
 
 export interface GQLUpdatable {
   viewerCanUpdate: boolean;
