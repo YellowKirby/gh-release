@@ -42,13 +42,13 @@ export type Config = {
   apiUrl: string,
   bearerToken: string,
   repo: Repo,
-  options?: Options 
+  options?: Options
 }
 
 if (require.main === module) {
   prog
     .description('Our super cool CLI thing')
-    .argument('<apiUrl>', 'Github API endpoint', prog.STRING, 'https://github.com/api/graphql')
+    .argument('<apiUrl>', 'GitHub API endpoint', prog.STRING, 'https://github.com/api/graphql')
     .argument('<bearerToken>', 'API Token')
     .argument('<owner>', 'Repo owner')
     .argument('<name>', 'Repo name')
