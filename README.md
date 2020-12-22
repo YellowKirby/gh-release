@@ -1,3 +1,3 @@
 # gh-release
 
-Generate release notes for Github
+Generate release notes for GitHub
